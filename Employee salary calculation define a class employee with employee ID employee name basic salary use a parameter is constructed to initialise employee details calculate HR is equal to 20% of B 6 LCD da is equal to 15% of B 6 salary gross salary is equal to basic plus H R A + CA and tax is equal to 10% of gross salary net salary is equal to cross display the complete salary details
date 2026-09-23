@@ -1,0 +1,32 @@
+ class Employee
+ {
+     int employeeid;
+     String name;
+     double salary;
+     
+     Employee(int employeeid, String name,double salary)
+     {
+       this.employeeid = employeeid;
+       this.name = name;
+       this.salary = salary;
+      }
+      void displayEmployeeDetails()
+      {
+        double hra , da , Gs , tax, NS;
+        hra= 20.0 / 100 * salary;
+        da = 15.0 / 100 * salary;
+        Gs = salary + hra+ da ;
+        tax = 10.0/ 100 * Gs;
+        NS = Gs - tax;
+        System.out.println("HRA:" +hra);
+        System.out.println(" DA:" + da);
+        System.out.println(" GS:" +Gs);
+        System.out.println(" TAX: "+  tax);
+        System.out.println(" Net salary : "+ NS);  
+       }
+	public static void main(String[] args) 
+	{
+		Employee  d = new Employee (22," diksha", 50000);
+		d.displayEmployeeDetails();
+	}
+}
