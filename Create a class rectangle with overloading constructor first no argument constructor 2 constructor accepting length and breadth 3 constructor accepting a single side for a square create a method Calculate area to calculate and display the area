@@ -1,0 +1,36 @@
+ class Rectangle 
+{
+	double length,breadth;
+	
+	Rectangle()
+	{
+	  length = 0;
+	  breadth = 0;
+	 }
+	 
+	 Rectangle(double length,double breadth)
+	 {
+	    this.length= length;
+	    this.breadth= breadth;
+	  }
+	  Rectangle (double side)
+	  {
+	     length = side;
+	     breadth = side;
+	   }
+	  void calculateArea ()
+	  {
+	    double area = length *breadth;
+	    System.out.println(" Area:" + area);
+	   }
+	
+	public static void main(String[] args) 
+	{
+		Rectangle r1 = new Rectangle();
+		Rectangle r2 = new Rectangle (50,3);
+		Rectangle r3 = new Rectangle(3);
+		r1.calculateArea();
+		r2.calculateArea();
+		r3.calculateArea();
+	}
+}
