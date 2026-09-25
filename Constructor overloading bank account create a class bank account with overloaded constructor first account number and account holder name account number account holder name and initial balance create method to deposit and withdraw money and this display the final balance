@@ -1,0 +1,58 @@
+class BankAccount
+{ 
+    long accountnumber;
+    String holdername;
+    double balance;
+    BankAccount( long  accountnumber , String holdername)
+    {
+       this.accountnumber= accountnumber;
+       this.holdername= holdername;
+       balance=0;
+     }
+     
+     BankAccount( long accountnumber,String holdername, double balance)
+     {
+        this.accountnumber= accountnumber;
+        this.holdername= holdername;
+        this.balance= balance;
+      }
+    
+    void deposit(long amount )
+     { 
+         balance= balance + amount;
+        
+      }
+      
+      void withdraw( long amount)
+      {
+           if (amount<=balance)
+           {
+              balance= balance- amount;
+            }
+         else
+         {
+           System.out.println(" balance is insufficient");
+          }
+         
+       }
+       
+       void display ()
+       {
+        System.out.println(" accountnumber:" + accountnumber);
+         System.out.println("holdername:"+ holdername);
+         
+          System.out.println("balance:"+ balance);
+         
+        }
+	public static void main(String[] args) 
+	{
+		BankAccount n1=new BankAccount( 34, "disha");
+		BankAccount n2 = new BankAccount (22, " diksha",40000);
+		n1.deposit(4000);
+		n1.withdraw(2000);
+		n2.deposit(7000);
+		n2.withdraw(4000);
+		n1.display();
+		n2.display();{
+	}
+}
