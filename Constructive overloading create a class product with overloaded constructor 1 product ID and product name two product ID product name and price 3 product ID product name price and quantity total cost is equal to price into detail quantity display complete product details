@@ -1,0 +1,54 @@
+class Product
+{ 
+   int productid;
+   String name;
+   long price;
+   int quantity;
+   long totalcost;
+   
+   Product (int productid, String name)
+   { 
+   
+      this.productid= productid;
+      this.name= name;
+      quantity = 0;
+      price= 0;
+      
+    }
+    
+    Product(int productid, String name, long price)
+    {
+       
+       this.productid= productid;
+       this.name= name;
+       this.price= price;
+       quantity=0;
+       
+     }
+     
+     Product(int productid, String name, long price, int quantity)
+     {
+         
+         this.productid= productid;
+         this.name= name;
+         this.price= price;
+         this.quantity= quantity;
+         
+      }
+      
+      void cost()
+      {
+       
+       totalcost= price* quantity;
+       System.out.println("Total cost:"+ totalcost);
+       }
+	public static void main(String[] args)
+	 {
+		 Product A = new Product(1,"bottle");
+		 Product B = new Product(2,"kitkat",100);
+		 Product C = new Product(3,"watch", 5000,90);
+		 A.cost();
+		 B.cost();
+		 C.cost();
+	}
+}  
