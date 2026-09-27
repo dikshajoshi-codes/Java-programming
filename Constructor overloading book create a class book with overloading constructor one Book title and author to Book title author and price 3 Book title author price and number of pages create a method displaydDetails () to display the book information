@@ -1,0 +1,61 @@
+class Book
+{
+	String title , Author;
+	long price;
+	int pages;
+	
+	Book (String title, String Author)
+	{
+	    
+	    this.title = title;
+	    this.Author = Author;
+	    price = 10;
+	    pages = 5;
+	    
+	 }
+	 
+	 Book (String title, String Author,long price)
+	 {
+	  
+	    this.title = title;
+	    this.Author = Author;
+	    this.price = price;
+	    pages = 5 ;
+	  
+	  }
+	  
+	  Book (String title, String Author, long price, int pages)
+	  { 
+	 
+	     this.title = title;
+	     this.Author = Author;
+	     this.price = price;
+	     this.pages = pages;
+	  
+	   }
+	   
+	   void displayDetails()
+	   { 
+	     System.out.println("Book Title:" + title);
+	     
+	     
+	     System.out.println("Book Author:" + Author);
+	     
+	     
+	     System.out.println(" Book Price:" + price);
+	     
+	     
+	     System.out.println(" Number of Pages:" + pages);
+	     
+	    }
+	public static void main(String[] args) 
+	{
+		 Book A = new Book("Warrior ","Dennis");
+		 Book B = new Book ("Ambassdor", "kane", 500);
+		 Book C = new Book ("last hope", "Alexander", 1000, 50);
+		 A.displayDetails();
+		 B.displayDetails();
+		 C.displayDetails();
+	
+	}
+}
