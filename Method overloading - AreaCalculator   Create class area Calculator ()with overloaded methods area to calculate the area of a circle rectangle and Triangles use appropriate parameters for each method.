@@ -1,0 +1,31 @@
+class AreaCalculator
+{ 
+     void area (double radius)
+     {
+        double result = 3.14 * radius*radius;
+         System.out.println("Area of circle : " + result);
+         
+      }
+      
+      void area (int length, int breadth)
+      {
+         int result = length* breadth;
+         System.out.println("Area of Rectangle:" + result);
+         
+       }
+       
+       void area(double base, double height)
+       {
+           double result = 0.5 * base* height;
+           System.out.println("Area of Triangle: " + result);
+        }
+	public static void main(String[] args)
+	 {
+		 AreaCalculator D = new AreaCalculator( );
+		 D.area(33);
+		 D.area(20,40);
+		 D.area(2.,50.);
+		 System.out.println("program finished");
+		 
+	}
+}
