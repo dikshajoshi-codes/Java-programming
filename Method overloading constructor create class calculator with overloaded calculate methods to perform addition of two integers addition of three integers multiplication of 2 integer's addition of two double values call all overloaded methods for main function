@@ -1,0 +1,34 @@
+ class Calculator
+{
+	void Calculator(int a, int b)
+	{
+	   int addition = a+b;
+	   System.out.println("Addition of two intergers:" + addition);
+	   
+	 }
+	 
+	 void Calculator(int p , int q, int r)
+	 {
+	    int addition = p + q + r;
+	    System.out.println("Addition of three integers:" + addition);
+	  }
+	 
+	 void Calculator( int a ,int b ,String operation)
+	 { 
+	    int multiply = a * b;
+	    System.out.println("Multiplication of two integers:" + multiply);
+	  }
+	  void Calculator(double a ,double b)
+	  { 
+	    double addition = a + b;
+	    System.out.println("Addition of double values");
+	   }
+	public static void main(String[] args) 
+	{
+		Calculator obj = new Calculator();
+		obj.Calculator(2,4);
+		obj.Calculator(2,4,5);
+		obj.Calculator(2,4, "Multiply");
+		obj.Calculator(6.0 , 7.0);
+	}
+}
